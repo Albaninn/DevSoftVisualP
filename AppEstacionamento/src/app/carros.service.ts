@@ -19,4 +19,18 @@ export class CarrosService {
   listar(): Observable<Carro[]> {
     return this.http.get<Carro[]>(this.url);
   }
+  buscar(placa: string): Observable<Carro> {
+    const apiUrl = `${this.url}/${placa}`;
+    return this.http.get<Carro>(apiUrl); 
+  }
+  cadastrar(carro: Carro): Observable<any> {
+    return this.http.post<Carro>(this.url, carro, httpOptions); 
+  }
+  atualizar(carro: Carro): Observable<any> {
+    return this.http.put<Carro>(this.url, carro, httpOptions); 
+  }
+  excluir(placa: string): Observable<any> {
+    const apiUrl = `${this.url}/${placa}`;
+    return this.http.delete<string>(apiUrl, httpOptions); 
+  }
 }

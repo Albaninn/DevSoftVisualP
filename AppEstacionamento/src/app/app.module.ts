@@ -3,18 +3,26 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CarrosComponent } from './components/carros/carros.component';
+
+import { CarrosService } from './carros.service';
+import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ModalModule} from 'ngx-bootstrap/modal';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    CarrosComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CommonModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    ModalModule.forRoot()
   ],
-  providers: [],
+  providers: [HttpClientModule, CarrosService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
