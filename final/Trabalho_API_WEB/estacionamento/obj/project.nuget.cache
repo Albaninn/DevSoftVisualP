@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BoLye9kaQ33Bon6RxkixnxXSXSew4y3r9aucz9oIzlg4sAf/gMvvVVXnS1SuEadhz7PB7cYFyVKFGEDpT7SwNQ==",
+  "dgSpecHash": "yFnD/LZJYE60DISF+Z+U4l4GCl0JCHDOFJUGuD6+kCoJsWwuqLwNaZFEP93xHBmVgMjWKMF4zgInxz0e6LSJ3w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\cesar\\Desktop\\facul\\UP\\2023.2\\DevSoftVisual\\DevSoftVisualP\\Trabalho_API_WEB\\estacionamento\\estacionamento.csproj",
+  "projectFilePath": "C:\\Users\\cesar\\Desktop\\facul\\UP\\2023.2\\DevSoftVisual\\DevSoftVisualP\\final\\Trabalho_API_WEB\\estacionamento\\estacionamento.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\cesar\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\cesar\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.10\\microsoft.aspnetcore.openapi.7.0.10.nupkg.sha512",

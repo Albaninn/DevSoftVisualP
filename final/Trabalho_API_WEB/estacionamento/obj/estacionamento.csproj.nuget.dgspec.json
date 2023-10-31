@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\cesar\\Desktop\\facul\\UP\\2023.2\\DevSoftVisual\\DevSoftVisualP\\Trabalho_API_WEB\\estacionamento\\estacionamento.csproj": {}
+    "C:\\Users\\cesar\\Desktop\\facul\\UP\\2023.2\\DevSoftVisual\\DevSoftVisualP\\final\\Trabalho_API_WEB\\estacionamento\\estacionamento.csproj": {}
   },
   "projects": {
-    "C:\\Users\\cesar\\Desktop\\facul\\UP\\2023.2\\DevSoftVisual\\DevSoftVisualP\\Trabalho_API_WEB\\estacionamento\\estacionamento.csproj": {
+    "C:\\Users\\cesar\\Desktop\\facul\\UP\\2023.2\\DevSoftVisual\\DevSoftVisualP\\final\\Trabalho_API_WEB\\estacionamento\\estacionamento.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cesar\\Desktop\\facul\\UP\\2023.2\\DevSoftVisual\\DevSoftVisualP\\Trabalho_API_WEB\\estacionamento\\estacionamento.csproj",
+        "projectUniqueName": "C:\\Users\\cesar\\Desktop\\facul\\UP\\2023.2\\DevSoftVisual\\DevSoftVisualP\\final\\Trabalho_API_WEB\\estacionamento\\estacionamento.csproj",
         "projectName": "estacionamento",
-        "projectPath": "C:\\Users\\cesar\\Desktop\\facul\\UP\\2023.2\\DevSoftVisual\\DevSoftVisualP\\Trabalho_API_WEB\\estacionamento\\estacionamento.csproj",
+        "projectPath": "C:\\Users\\cesar\\Desktop\\facul\\UP\\2023.2\\DevSoftVisual\\DevSoftVisualP\\final\\Trabalho_API_WEB\\estacionamento\\estacionamento.csproj",
         "packagesPath": "C:\\Users\\cesar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cesar\\Desktop\\facul\\UP\\2023.2\\DevSoftVisual\\DevSoftVisualP\\Trabalho_API_WEB\\estacionamento\\obj\\",
+        "outputPath": "C:\\Users\\cesar\\Desktop\\facul\\UP\\2023.2\\DevSoftVisual\\DevSoftVisualP\\final\\Trabalho_API_WEB\\estacionamento\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\cesar\\AppData\\Roaming\\NuGet\\NuGet.Config"
