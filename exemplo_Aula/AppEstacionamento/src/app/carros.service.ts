@@ -2,7 +2,6 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Carro } from './Carro';
-
 const httpOptions = {
   headers: new HttpHeaders({
     'Content-Type' : 'application/json'
@@ -12,7 +11,6 @@ const httpOptions = {
 @Injectable({
   providedIn: 'root'
 })
-
 export class CarrosService {
   apiUrl = 'http://localhost:5000/Carro';
   constructor(private http: HttpClient) { }
@@ -28,9 +26,9 @@ export class CarrosService {
     const url = `${this.apiUrl}/cadastrar`;
     return this.http.post<Carro>(url, carro, httpOptions);
   }
-  atualizar(carro: Carro): Observable<any> {
-    const url = `${this.apiUrl}/atualizar`;
-    return this.http.put<Carro>(url, carro, httpOptions); 
+  alterar(carro: Carro): Observable<any> {
+    const url = `${this.apiUrl}/alterar`;
+    return this.http.put<Carro>(url, carro, httpOptions);
   }
   excluir(placa: string): Observable<any> {
     const url = `${this.apiUrl}/buscar/${placa}`;

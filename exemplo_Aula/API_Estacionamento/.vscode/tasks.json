@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/API_Estacionamento.csproj",
+                "${workspaceFolder}/API_Estacionamento.sln",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -19,7 +19,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/API_Estacionamento.csproj",
+                "${workspaceFolder}/API_Estacionamento.sln",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -33,7 +33,7 @@
                 "watch",
                 "run",
                 "--project",
-                "${workspaceFolder}/API_Estacionamento.csproj"
+                "${workspaceFolder}/API_Estacionamento.sln"
             ],
             "problemMatcher": "$msCompile"
         }
