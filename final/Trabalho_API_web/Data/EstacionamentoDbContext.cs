@@ -11,6 +11,8 @@ public class EstacionamentoDbContext : DbContext
     public DbSet<Servico>? servico {get; set;}
     public DbSet<Periodo>? periodo {get; set;}
     public DbSet<Ticket>? ticket {get; set;}
+    public DbSet<Marca>? marca {get; set;}
+    public DbSet<Modelo>? modelo {get; set;}
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         optionsBuilder.UseSqlite(connectionString: "DataSource=estacionamento.db;Cache=Shared");
