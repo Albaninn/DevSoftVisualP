@@ -22,7 +22,9 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseCors(opcoes => opcoes.AllowAnyOrigin().AllowAnyHeader());//linha add pro angular
+app.UseCors(opcoes => opcoes
+    .WithOrigins("http://localhost:4200") // endereço do front
+    .AllowAnyHeader().AllowAnyMethod().AllowCredentials());//linha add pro angular
 
 app.UseAuthorization();
 
