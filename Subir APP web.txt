@@ -1,0 +1,91 @@
+Baixar ANGULAR CLI E NODE .JS
+
+• O Angular CLI (Command Line Interface –Interface de Linha de Comando) 
+é uma ferramenta de linha decomando usada para criar, gerenciar e construir projetosAngular;
+• Essa ferramenta depende do Node.js para executar, pois utilizao npm (Node Package Manager) 
+para instalar e gerenciar asdependências do projeto: https://nodejs.org/en
+
+ATUALIZAÇÃO/REINSTALAÇÃO DO NODE NOS LABS
+
+• Desinstalar o node.js ( Adicionar ou remover programas)
+• Excluir a pasta npm da pasta AppData\Roaming abaixo detodos os perfis em 
+
+	C:\Users: C:\Users\Default\AppData\Roaming\npm 
+	C:\Users\Aluno\AppData\Roaming\npm 
+	C:\Users\ ... \AppData\Roaming\npm 
+
+• Instalar o node.js novamente https://nodejs.org/en
+
+INSTALAÇÃO/ATUALIZAÇÃO DO NPM E DA CLI (atualizar pra rodar o codigo)
+
+• Este procedimento deve ser realizado em uma janela PowerShellque tenha autoridade de administrador:
+
+	npm install -g npm@10.2.0
+
+	npm install -g @angular/cli
+
+
+CRIANDO A APLICAÇÃO ANGULAR (FRONT) (criando a pasta base do projeto)
+
+• Para criar a aplicação, navegue até a pasta-base desejada e executeo seguinte comando:
+
+	ng new AppEstacionamento
+
+-Ao criar uma aplicação Angular, todos os módulos da versão do angular 
+instalada no computador serão copiados para uma subpasta da aplicação;
+
+-Por conta disso, futuramente se for atualizada a versão do node/angular,
+é necessário realizar um procedimento para atualização dos módulos e docódigo da sua aplicação.
+
+BOOTSTRAP
+
+• O Bootstrap é um framework frontend gratuito e decódigo aberto para desenvolvimento 
+de componentes de interfacepara sites e aplicações web, que faz uso de HTML, CSS e JavaScript;
+
+• Vamos utilizá-lo em nossa aplicação frontend exemplo, então énecessário instalá-lo no diretório da aplicação:
+
+	cd .\AppEstacionamento\
+
+	npm install ngx-bootstrap
+
+
+	(ver codigos para ajustar no back (API) e oq ajustar no front)
+
+
+CRIAÇÃO DO SERVIÇO
+• Para dar funcionalidade à entidade, deve-se criar um serviço apartir da model:
+
+
+	cd .\AppEstacionamento
+
+	cd .\src\app
+
+	ng g s Carros ->(nome da model usada)
+
+		(Ajustar no app.module.ts o novo servico [import { CarrosService } from './carros.service';] [imports] [providers])
+		(Ajustar o "model".service.ts)
+
+CRIAÇÃO DO COMPONENTE
+
+• Agora é preciso criar o componente visual da entidade, composto dearquivos html, css, ts...
+
+	cd .\AppEstacionamento\src\app
+	mkdir components
+
+	cd components
+	ng g c Carros
+
+		(Ajustar no app.module.ts o novo servico [import { CarrosComponent } from'./components/carros/carros.component';])
+		(Ajustar app-routing.module.ts)
+		(Ajustar o "model".component.ts)
+		(Fazer o "model".component.html)
+
+
+COMPILAÇÃO E EXECUÇÃO DA APLICAÇÃO
+
+	cd .\AppEstacionamento -----> estando no diretório da aplicação...
+	ng serve               ----->... execute o comando de servir (executar o front)
+
+• A aplicação responde no endereço: http://localhost:4200/
+• No navegador, complemente com o serviço para testar: http://localhost:4200/carros -----> a rota é case sensitive!
+
