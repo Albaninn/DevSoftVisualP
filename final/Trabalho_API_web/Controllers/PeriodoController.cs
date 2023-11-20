@@ -9,19 +9,11 @@ using Microsoft.EntityFrameworkCore;
 public class PeriodoController : ControllerBase
 
 {
-
-    //--------------------------------------------------------------------//
-
-    //injeção de dependencia para a acesso ao banco de dados sqlite;
-
     private EstacionamentoDbContext _context;
     public PeriodoController(EstacionamentoDbContext context)
     {
         _context = context;
     }
-
-    //--------------------------------------------------------------------//
-
 
 
     [HttpGet]

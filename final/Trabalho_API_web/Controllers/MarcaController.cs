@@ -5,8 +5,8 @@ using Microsoft.EntityFrameworkCore;
 [Route("[controller]")]
 public class MarcaController : ControllerBase
 {
-    private EstacionamentoDbContext _dbContext;
-    public MarcaController(EstacionamentoDbContext dbContext)
+    private EstacionamentoDbContext _context;
+    public MarcaController(EstacionamentoDbContext context)
     {
         _context = context;
     }
@@ -54,9 +54,9 @@ public class MarcaController : ControllerBase
     {
         if (_context is null) return BadRequest();
         if (_context.marca is null) return BadRequest();
-        var marcaTemp = await _context.marca.FindAsync(marca._idMarca);
+        var marcaTemp = await _context.marca.FindAsync(marca.idMarca);
         if (marcaTemp is null) return BadRequest();
-        marcaTemp._nomeMarca = marca._nomeMarca;
+        marcaTemp.nomeMarca = marca.nomeMarca;
         await _context.SaveChangesAsync();
         return Ok();
     }
@@ -65,11 +65,11 @@ public class MarcaController : ControllerBase
 
     [HttpDelete()]
     [Route("excluir/{id}")]
-    public async Task<ActionResult> Excluir(int id)
+    public async Task<ActionResult> Excluir(int idMarca)
     {
         if (_context is null) return BadRequest();
         if (_context.marca is null) return BadRequest();
-        var marcaTemp = await _context.marca.FindAsync(id);
+        var marcaTemp = await _context.marca.FindAsync(idMarca);
         if (marcaTemp is null) return BadRequest();
         _context.Remove(marcaTemp);
         await _context.SaveChangesAsync();

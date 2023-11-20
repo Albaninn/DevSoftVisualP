@@ -7,13 +7,12 @@ using Microsoft.EntityFrameworkCore;
 [Route("[controller]")]
 public class ModeloController : ControllerBase
 {
-    private EstacionamentoDbContext _dbContext;
-    public ModeloController(EstacionamentoDbContext dbContext)
+    private EstacionamentoDbContext _context;
+    public ModeloController(EstacionamentoDbContext context)
     {
         _context = context;
     }
-    //--------------------------------------------------------------------//
-
+    
     [HttpGet]
     [Route("listar")]
     public async Task<ActionResult<IEnumerable<Modelo>>> Listar()
@@ -57,9 +56,9 @@ public class ModeloController : ControllerBase
     {
         if(_context is null) return BadRequest();
         if(_context.modelo is null) return BadRequest();
-        var modeloTemp = await _context.modelo.FindAsync(modelo._idMarca);
+        var modeloTemp = await _context.modelo.FindAsync(modelo.idMarca);
         if(modeloTemp is null) return BadRequest();
-        modeloTemp._nomeModelo = modelo._nomeModelo;
+        modeloTemp.nomeModelo = modelo.nomeModelo;
         await _context.SaveChangesAsync();
         return Ok();
     }
@@ -68,11 +67,11 @@ public class ModeloController : ControllerBase
     
     [HttpDelete()]
     [Route("excluir/{id}")]
-    public async Task<ActionResult> Excluir(int id)
+    public async Task<ActionResult> Excluir(int idModelo)
     {
         if(_context is null) return BadRequest();
         if(_context.modelo is null) return BadRequest();
-        var modeloTemp = await _context.modelo.FindAsync(id);
+        var modeloTemp = await _context.modelo.FindAsync(idModelo);
         if(modeloTemp is null) return BadRequest();
         _context.Remove(modeloTemp);
         await _context.SaveChangesAsync();

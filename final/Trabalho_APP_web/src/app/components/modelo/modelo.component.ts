@@ -32,10 +32,8 @@ export class ModeloComponent implements OnInit {
     this.formulario = new FormGroup({
       _idModelo: new FormControl(null),
       _nomeModelo: new FormControl(null),
-      _segmento: new FormControl(null),
-      _motor: new FormControl(null),
-      _qtdPortas: new FormControl(null),
       _AnoModelo: new FormControl(null),
+      _segmento: new FormControl(null),
       _TipoModelo: new FormControl(null),
       _idMarca: new FormControl(null)
 

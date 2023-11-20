@@ -6,19 +6,11 @@ using Microsoft.EntityFrameworkCore;
 [Route("[controller]")]
 public class ServicoController : ControllerBase
 {
-
-    //--------------------------------------------------------------------//
-
-    //injeção de dependencia para a acesso ao banco de dados sqlite;
-
     private EstacionamentoDbContext _context;
     public ServicoController(EstacionamentoDbContext context)
     {
         _context = context;
     }
-
-    //--------------------------------------------------------------------//
-
 
 
     [HttpGet]

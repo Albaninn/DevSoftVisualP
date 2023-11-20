@@ -9,26 +9,17 @@
             formControlName="_nomeModelo"/>
           </div>
           <div class="form-group">
-            <label>Motor</label>
-            <input type="text" class="form-control form-control-sm" 
-            formControlName="_motor"/>
-          </div>
-          <div class="form-group">
-            <label>Quantidade Portas</label>
-            <input type="text" class="form-control form-control-sm" 
-            formControlName="_qtdPortas"/>
-          </div>
-          <div class="form-group">
             <label>Ano Modelo</label>
             <input type="text" class="form-control form-control-sm" 
             formControlName="_AnoModelo"/>
           </div>
-          <div class="form-group">
-            <label>Nome Marca</label>
-            <select class="form-control form-control-sm" formControlName="_idMarca">
-              <option *ngFor="let marca of marcas" [value]="marca._idMarca">
-                {{ marca._nomeMarca }}
-              </option>
+          <div class="form-acion">
+            <label>Selecione o Tipo:</label>
+            <select class="form-control" formControlName="_segmento">
+              <option value="Automóveis">Automóveis</option>
+              <option value="Motocicletas">Motocicletas</option>
+              <option value="Onibus">Onibus</option>
+              <option value="Caminhões">Caminhões</option>
             </select>
           </div>
           <div class="form-action">
@@ -42,6 +33,14 @@
               <option value="Minivan">Minivan</option>
               <option value="Esportivo">Esportivo</option>
               <option value="Furgão">Furgão</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Nome Marca</label>
+            <select class="form-control form-control-sm" formControlName="_idMarca">
+              <option *ngFor="let marca of marca" [value]="marca._idMarca">
+                {{ marca._nomeMarca }}
+              </option>
             </select>
           </div>
           <div class="container">

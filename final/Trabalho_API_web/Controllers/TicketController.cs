@@ -6,19 +6,11 @@ using Microsoft.EntityFrameworkCore;
 [Route("[controller]")]
 public class TicketController : ControllerBase
 {
-
-        //--------------------------------------------------------------------//
-
-        //injeção de dependencia para a acesso ao banco de dados sqlite;
-
         private EstacionamentoDbContext _context;
         public TicketController(EstacionamentoDbContext context)
         {
             _context = context;
         }
-
-        //--------------------------------------------------------------------//
-
 
 
 

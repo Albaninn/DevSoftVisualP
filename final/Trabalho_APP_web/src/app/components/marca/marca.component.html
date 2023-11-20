@@ -1,21 +1,12 @@
 <div class="container p-5">
     <div class="row">
       <div class="col-6 border border-light rounded p-5 shadow" *ngIf="formulario">
-        <h6>{{ tituloFormulario }}</h6>
+        <h1>Marca</h1>
         <form [formGroup]="formulario" (ngSubmit)="enviarFormulario()">
             <div class="form-group">
               <label>Nome</label>
               <input type="text" class="form-control form-control-sm" formControlName="_nomeMarca"/>
             </div>
-            <div class="form-acion">
-                  <label>Selecione o Tipo:</label>
-                  <select class="form-control" formControlName="_segmento">
-                    <option value="Automóveis">Automóveis</option>
-                    <option value="Motocicletas">Motocicletas</option>
-                    <option value="Onibus">Onibus</option>
-                    <option value="Caminhões">Caminhões</option>
-                  </select>
-              </div>
             <div class="container">
               <div class="row">
                 <div>
